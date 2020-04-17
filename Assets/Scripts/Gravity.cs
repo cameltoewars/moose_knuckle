@@ -22,7 +22,7 @@ public class Gravity : MonoBehaviour
             Vector3 forceDirection = gameObject.transform.position - player.transform.position;
             Rigidbody rb = player.GetComponent(typeof(Rigidbody)) as Rigidbody;
             double G = 6.67e-11;
-            Debug.Log(forceDirection.magnitude);
+            
             double forceMagnitude = (G * bodyMass * rb.mass) / System.Math.Pow(forceDirection.magnitude * distanceScale, 2);
 
             forceDirection.Normalize();
